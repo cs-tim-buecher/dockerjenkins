@@ -9,7 +9,7 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | te
     apt-get update && \
     echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
     apt-get --no-install-recommends -y install oracle-java8-installer && \
-    apt-get --no-install-recommends -y install fakeroot apt-transport-https && \
+    apt-get --no-install-recommends -y install fakeroot apt-transport-https libltdl7 && \
     apt-get purge -y openjdk-8-jdk && \
     apt-get purge -y openjdk-8-jre && \
     apt-get purge -y openjdk-8-jre-headless && \
